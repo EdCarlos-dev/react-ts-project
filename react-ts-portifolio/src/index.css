@@ -84,3 +84,21 @@ button:focus-visible {
   margin-top: 5%;
 
 }
+
+
+.skil-div{
+
+  display: inline-block;
+}
+
+.skill-item{
+  background-color: rgb(3, 0, 165);
+  color: aliceblue;
+  border-radius: 10px;
+  
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 5px;
+  padding: 5px;
+
+}

@@ -8,17 +8,9 @@ import javascriptLogo from './assets/javascriptlogo.png'
 import viteLogo from '/vite.svg'
 
 import './App.css'
+import Header from './header.tsx'
+import Footer from './footer.tsx'
 
-const copyRight: string = 'Copyright 2020'
-const welcome: string = 'Profile App'
-const titlePage: string = '30 days react'
-const title: string = 'Getting Started React'
-
-const today = new Date();
-const dd = String(today.getDate()).padStart(2, '0');
-const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-const yyyy = today.getFullYear();
-const date: string = mm + '/' + dd + '/' + yyyy;
 const currentYear = new Date().getFullYear()
 
 const contact: {firstName:string,
@@ -56,6 +48,8 @@ const techLogos = (
   </div>
 )
 
+const skilsFormatted = contact.skills.map((itemSkil) => <div className='skill-item'>{itemSkil}</div>)
+
 function UserCard  ()  {
 
   return (
@@ -76,32 +70,16 @@ function UserCard  ()  {
   )
 }
 
-
-function Header () {
+function Button () {
   return (
-    <header>
-    <title>{titlePage}</title>
-    <div className='header-wrapper'>
-      <h3>{welcome}</h3>
-      <h2>{title}</h2>
-      
-      <small>Today: {date}</small>
-    </div>
-</header>
+
+    <button className='Buttton-modal' >Click to Modal</button>
+
   )
 
 }
 
-function Footer () {
 
-  return (
-    <footer>
-      <div className='footer-wrapper'>
-        <p>{copyRight}</p>
-      </div>
-    </footer>
-  )
-}
 
 function App() {
 
@@ -111,9 +89,14 @@ function App() {
     <>
    <div>
     <Header/>
-
     <UserCard/>
-     
+    {skilsFormatted}
+
+      <div className='skils-div'>
+      
+      
+
+      </div>
       <div>
         {techLogos}
         <a href="https://vitejs.dev" target="_blank">
@@ -128,6 +111,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <Button/>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
