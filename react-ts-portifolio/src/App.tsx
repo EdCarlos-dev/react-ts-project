@@ -39,6 +39,7 @@ const contact: {firstName:string,
                     }
 
 const techLogos = (
+
   <div className='tecnologies'>
     <p><b>Front end Technologies</b>.</p> 
     <img className='techimage' src={htmlLogo} alt='ReactLogo' />
