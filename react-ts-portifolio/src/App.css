@@ -12,6 +12,7 @@ header {
   
 }
 
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -50,6 +51,18 @@ header {
   to {
     transform: rotate(360deg);
   }
+}
+.userimage{
+  width: 100px;
+  padding: 1rem;
+  display: inline-block;
+  vertical-align: top;
+  
+}
+.card-div-text{
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
 }
 
 @media (prefers-reduced-motion: no-preference) {
