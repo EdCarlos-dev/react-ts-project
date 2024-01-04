@@ -12,11 +12,10 @@ interface ContactData {
   email: string;
   cellphone: string;
   yearBorn: number;
-  skills: string[];
 }
 
-class UserCard extends Component<{}, ContactData> {
-  constructor(props: {}) {
+class UserCard extends Component<object, ContactData> {
+  constructor(props:object) {
     super(props);
     this.state = {
       firstName: '',
@@ -24,8 +23,7 @@ class UserCard extends Component<{}, ContactData> {
       country: '',
       email: '',
       cellphone: '',
-      yearBorn: 0,
-      skills: [],
+      yearBorn: 0
     };
   }
 

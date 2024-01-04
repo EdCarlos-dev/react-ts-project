@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-
 import reactLogo from './assets/react.svg'
 import htmlLogo from './assets/htmllogo.png'
 import cssLogo from './assets/csslogo.png'
@@ -13,6 +12,7 @@ import Modal from './modal'
 import TechDivs from './TechDivs.tsx'
 import TenHighestPopulationChart from './TenHighestPopulationChart.tsx'
 import UserCard from './cardUser.tsx'
+// import CountryData from './countriesApi.tsx'
 
 import './App.css'
 import './index.css'
@@ -66,8 +66,7 @@ function App() {
 
   // Adiciona uma classe ao body com base no estado de isDarkMode
   document.body.className = isDarkMode ? 'dark-mode' : '';
-
- 
+  
   return (
     <>
    <div>
@@ -89,9 +88,11 @@ function App() {
       <TechDivs/>
 
       <TenHighestPopulationChart/>
-      
+
+      {/* <CountryData/> */}
 
        </div>
+      {/* <ApiResult/> */}
       <Footer/>
     </>
   )
