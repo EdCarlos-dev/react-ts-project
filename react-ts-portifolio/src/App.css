@@ -78,3 +78,7 @@ header {
 .read-the-docs {
   color: #888;
 }
+body.dark-mode {
+  background-color: #000000;
+  color: #fff;
+}

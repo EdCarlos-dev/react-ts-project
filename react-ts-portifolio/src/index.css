@@ -111,3 +111,7 @@ button:focus-visible {
     height: '600px';
 
    }
+body.dark-mode {
+  background-color: #000000;
+  color: #fff;
+}

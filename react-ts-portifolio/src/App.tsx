@@ -47,6 +47,7 @@ const skilsFormatted = skills.map((itemSkil) => <div className='skill-item'>{ite
 
 function App() {
 
+
   const [count, setCount] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false); 
   const openModal = () => {
@@ -56,6 +57,15 @@ function App() {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  // Adiciona uma classe ao body com base no estado de isDarkMode
+  document.body.className = isDarkMode ? 'dark-mode' : '';
 
  
   return (
@@ -72,7 +82,8 @@ function App() {
  
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <button onClick={openModal}>Open Modal</button> {/* Botão para abrir o modal */}
+        <button onClick={openModal}>Open Modal</button> 
+        <button onClick={toggleDarkMode}>Dark Mode</button>
       </div>
       {isModalOpen && <Modal onClose={closeModal} />} 
       <TechDivs/>
