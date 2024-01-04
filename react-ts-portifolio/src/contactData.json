@@ -1,0 +1,19 @@
+
+{
+  "firstName": "Ed Carlos",
+  "lastName": "Santos",
+  "country": "Brazil",
+  "email": "email#email.com",
+  "cellphone": "+55 11 999 999 999",
+  "yearBorn": 1987,
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Typescript",
+    "Python",
+    "Artificial Interigence",
+    "Proactivity",
+    "Responsability"
+  ]
+}

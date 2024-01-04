@@ -1,33 +1,23 @@
 import { useState } from 'react'
 
+
 import reactLogo from './assets/react.svg'
-import userIcon from './assets/usericon.png'
 import htmlLogo from './assets/htmllogo.png'
 import cssLogo from './assets/csslogo.png'
 import javascriptLogo from './assets/javascriptlogo.png'
 import viteLogo from '/vite.svg'
 
-import './App.css'
 import Header from './header.tsx'
 import Footer from './footer.tsx'
+import Modal from './modal'
+import TechDivs from './TechDivs.tsx'
+import TenHighestPopulationChart from './TenHighestPopulationChart.tsx'
+import UserCard from './cardUser.tsx'
 
-const currentYear = new Date().getFullYear()
+import './App.css'
+import './index.css'
 
-const contact: {firstName:string,
-                lastName:string,
-                country:string,
-                email:string,
-                cellphone:string,
-                yearBorn:number,
-                skills:string[]
-              } = {
-                      firstName: 'Ed Carlos',
-                      lastName: 'Santos',
-                      country: 'Brazil',
-                      email: 'email#email.com',
-                      cellphone: '+55 11 999 999 999',
-                      yearBorn: 1987,
-                      skills: [
+const skills:string[] = [
                         'HTML', 
                         'CSS', 
                         'JavaScript' , 
@@ -36,8 +26,6 @@ const contact: {firstName:string,
                         'Artificial Interigence', 
                         'Proactivity', 
                         'Responsability']
-                    }
-
 const techLogos = (
 
   <div className='tecnologies'>
@@ -46,53 +34,29 @@ const techLogos = (
     <img className='techimage' src={cssLogo} alt='ReactLogo' />
     <img className='techimage' src={javascriptLogo} alt='ReactLogo' />
     
-    <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo vite" alt="Vite logo" />
-    </a>
-    <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-    </a>
+    <img src={viteLogo} className="logo vite" alt="Vite logo" />
+    
+    <img src={reactLogo} className="logo react" alt="React logo" />
+    
     <h1>Vite + React</h1>
     
   </div>
 )
 
-const skilsFormatted = contact.skills.map((itemSkil) => <div className='skill-item'>{itemSkil}</div>)
-
-function UserCard  ()  {
-
-  return (
-
-    <div className='card-div' >
-
-        <img className='userimage' src={userIcon} alt='ReactLogo' />
-        
-        <div className='card-div-text'>
-          <h2>{contact.firstName} {contact.lastName} </h2>
-          <p>{currentYear - contact.yearBorn} years old</p>
-          <p>{contact.country}</p>
-          <p>{contact.email}</p>
-          <p>{contact.cellphone}</p>
-        </div>
-
-    </div>
-  )
-}
-
-function Button () {
-  return (
-
-    <button className='Buttton-modal' >Click to Modal</button>
-
-  )
-
-}
-
-
+const skilsFormatted = skills.map((itemSkil) => <div className='skill-item'>{itemSkil}</div>)
 
 function App() {
 
   const [count, setCount] = useState(0)
+  const [isModalOpen, setIsModalOpen] = useState(false); 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
  
   return (
     <>
@@ -106,12 +70,15 @@ function App() {
       
       {techLogos}
  
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <Button/>
-        </div>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+        <button onClick={openModal}>Open Modal</button> {/* Botão para abrir o modal */}
+      </div>
+      {isModalOpen && <Modal onClose={closeModal} />} 
+      <TechDivs/>
+
+      <TenHighestPopulationChart/>
+      
 
        </div>
       <Footer/>
