@@ -66,6 +66,20 @@ function App() {
 
   // Adiciona uma classe ao body com base no estado de isDarkMode
   document.body.className = isDarkMode ? 'dark-mode' : '';
+
+
+  // link to countries data
+  let data = ''
+  fetch('https://restcountries.com/v3.1/all')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+
+    data=myJson
+ console.log(data)
+  });
+
   
   return (
     <>
