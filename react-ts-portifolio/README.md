@@ -1,4 +1,6 @@
-# React + TypeScript + Vite
+- Developer - Ed Carlos Santos
+
+## React + TypeScript + Vite
 This is an adaptation of a 30 of React with Typescript
 
 To run
