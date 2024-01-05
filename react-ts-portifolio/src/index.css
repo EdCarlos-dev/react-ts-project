@@ -133,3 +133,29 @@ body.dark-mode {
   background-color: #000000;
   color: #fff;
 }
+
+.countries-wrapper{
+  background-color: cadetblue;
+  border-radius: 20px;
+  overflow-y: auto;
+  max-height: 700px;
+  padding: 2%;
+}
+.country{
+  background-color: cornsilk;
+  border-radius: 20px;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  padding: 2%;
+}
+.country_flag{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+.flag-atyle{
+  border-radius: 10%;
+  width: 100%;
+}

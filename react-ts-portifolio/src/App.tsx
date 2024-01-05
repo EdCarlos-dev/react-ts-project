@@ -20,15 +20,27 @@ import CountryDivList from './countriesApi.tsx'
 import './App.css'
 import './index.css'
 
-const skills:string[] = [
-                        'HTML', 
-                        'CSS', 
-                        'JavaScript' , 
-                        'Typescript', 
-                        'Python', 
-                        'Artificial Interigence', 
-                        'Proactivity', 
-                        'Responsability']
+
+function SkillformatedList () {
+  const skills:string[] = [
+    'HTML', 
+    'CSS', 
+    'JavaScript' , 
+    'Typescript', 
+    'Python', 
+    'Artificial Interigence', 
+    'Proactivity', 
+    'Responsability'
+]
+const skilsFormatted = skills.map((itemSkil) => <div className='skill-item'>{itemSkil}</div>)
+
+  return(
+    <div className='skils-div'>
+      {skilsFormatted}
+    </div>
+  )
+}
+
 const techLogos = (
 
   <div className='tecnologies'>
@@ -46,7 +58,6 @@ const techLogos = (
   </div>
 )
 
-const skilsFormatted = skills.map((itemSkil) => <div className='skill-item'>{itemSkil}</div>)
 
 function App() {
 
@@ -70,46 +81,29 @@ function App() {
   // Adiciona uma classe ao body com base no estado de isDarkMode
   document.body.className = isDarkMode ? 'dark-mode' : '';
 
-    //  let data = ''
-    //  fetch('https://restcountries.com/v3.1/all')
-    //  .then(function(response) {
-    //  return response.json();
-    //  })
-    //  .then(function(myJson) {
-
-    //  data=myJson
-    //  console.log(data)
-    //  });
-
-
   return (
     <>
-   <div>
-    <Header/>
-    <UserCard/>
+      <div>
+        <Header/>
+        <UserCard/>
+        <SkillformatedList/>        
+        {techLogos}
+  
+          <div className="card">
+            <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+            <button onClick={openModal}>Open Modal</button> 
+            <button onClick={toggleDarkMode}>Dark Mode</button>
+            {isModalOpen && <Modal onClose={closeModal} />} 
+          </div>
+        
+        <TechDivs/>
+        <TenHighestPopulationChart/>
+        <CountryDivList/>
+        <Footer/>
+        
 
-      <div className='skils-div'>
-      {skilsFormatted}
       </div>
-      
-      {techLogos}
- 
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <button onClick={openModal}>Open Modal</button> 
-        <button onClick={toggleDarkMode}>Dark Mode</button>
-      </div>
-      {isModalOpen && <Modal onClose={closeModal} />} 
-      <TechDivs/>
 
-      <TenHighestPopulationChart/>
-
-      {/* <CountryData/> */}
-
-       </div>
-      {/* <ApiResult/> */}
-      <CountryDivList/>
-      <Footer/>
     </>
   )
 }

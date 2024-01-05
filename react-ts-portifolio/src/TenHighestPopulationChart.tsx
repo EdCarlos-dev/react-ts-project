@@ -3,7 +3,7 @@ import 'chart.js/auto';
 import './index.css'
 
 
-const TenHighestPopulationChart = () => {
+function TenHighestPopulationChart () {
   const tenHighestPopulation = [
     { country: 'World', population: 7693165599 },
     { country: 'China', population: 1377422166 },
@@ -54,6 +54,6 @@ const TenHighestPopulationChart = () => {
       <Chart type='bar' data={data} options={options} />
     </div>
   );
-};
+}
 
 export default TenHighestPopulationChart;

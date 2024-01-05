@@ -19,15 +19,22 @@ const Country = ({ country: { name, flags, population } }: CountryProps): ReactE
   return (
     <div className='country'>
       <div className='country_flag'>
-        <img src={flags.png} alt={name.common} />
+
+        <img className='flag-atyle' src={flags.png} alt={name.common} />
+
       </div>
-      <h3 className='country_name'> Common : {name.common.toUpperCase()}</h3>
-      <h4 className="h2">Official : {name.official}</h4>
-      <div className='country_text'>
-        <p>
-          <span>Population: </span>
-          {population}
-        </p>
+
+      <div className='country-content'>
+
+        <h3 className='country_name'> Common : {name.common.toUpperCase()}</h3>
+        <h4 className="country-name-official">Official : {name.official}</h4>
+        <div className='country_text'>
+          <p>
+            <span>Population: </span>
+            {population}
+          </p>
+        </div>
+
       </div>
     </div>
   );
@@ -71,11 +78,12 @@ class CountryDivList extends Component<object, CountryDivListState> {
 
   render() {
     return (
-      <div className='App'>
+      <div className='countries-area'>
         <h2>React Component Life Cycle</h2>
         <h1>Calling API</h1>
         <div>
           <p>There are {this.state.data.length} countries in the API</p>
+          <p>filter by key word</p>
           <div className='countries-wrapper'>
             {this.state.data.map((country, index) => (
               <Country key={index} country={country} />
@@ -88,3 +96,14 @@ class CountryDivList extends Component<object, CountryDivListState> {
 }
 
 export default CountryDivList;
+
+//  let data = ''
+//  fetch('https://restcountries.com/v3.1/all')
+//  .then(function(response) {
+//  return response.json();
+//  })
+//  .then(function(myJson) {
+
+//  data=myJson
+//  console.log(data)
+//  });
