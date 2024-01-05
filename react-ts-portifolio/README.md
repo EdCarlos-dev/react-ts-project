@@ -1,15 +1,24 @@
 # React + TypeScript + Vite
+This is an adaptation of a 30 of React with Typescript
 
 To run
 
-Create a path
+- Create a path
+```bash
 cd react-ts-portifolio
+```
 
-Install dependencies
+- Install dependencies
+
+```bash
 npm install
+```
 
-Run project
+- Run project
+
+```bash 
 npm run dev
+```
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
