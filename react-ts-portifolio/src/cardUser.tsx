@@ -28,7 +28,7 @@ class UserCard extends Component<object, ContactData> {
   }
 
   componentDidMount() {
-    console.log(contactUser);
+    // console.log(contactUser);
     this.setState(contactUser);
     // axios.get('/contactData.json')
     //   .then((response) => {

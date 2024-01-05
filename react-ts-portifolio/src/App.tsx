@@ -12,6 +12,9 @@ import Modal from './modal'
 import TechDivs from './TechDivs.tsx'
 import TenHighestPopulationChart from './TenHighestPopulationChart.tsx'
 import UserCard from './cardUser.tsx'
+
+import CountryDivList from './countriesApi.tsx'
+
 // import CountryData from './countriesApi.tsx'
 
 import './App.css'
@@ -67,20 +70,18 @@ function App() {
   // Adiciona uma classe ao body com base no estado de isDarkMode
   document.body.className = isDarkMode ? 'dark-mode' : '';
 
+    //  let data = ''
+    //  fetch('https://restcountries.com/v3.1/all')
+    //  .then(function(response) {
+    //  return response.json();
+    //  })
+    //  .then(function(myJson) {
 
-  // link to countries data
-  let data = ''
-  fetch('https://restcountries.com/v3.1/all')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
+    //  data=myJson
+    //  console.log(data)
+    //  });
 
-    data=myJson
- console.log(data)
-  });
 
-  
   return (
     <>
    <div>
@@ -107,6 +108,7 @@ function App() {
 
        </div>
       {/* <ApiResult/> */}
+      <CountryDivList/>
       <Footer/>
     </>
   )
