@@ -3,6 +3,9 @@ import 'chart.js/auto';
 import './index.css'
 
 
+// consumir o api para fazer os graficos
+
+
 function TenHighestPopulationChart () {
   const tenHighestPopulation = [
     { country: 'World', population: 7693165599 },

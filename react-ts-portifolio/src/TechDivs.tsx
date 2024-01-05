@@ -1,3 +1,4 @@
+
 const hexaColor = () => {
   let str = '0123456789abcdef';
   let color = '';
