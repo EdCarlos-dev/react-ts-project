@@ -143,6 +143,7 @@ body.dark-mode {
 }
 .country{
   background-color: cornsilk;
+  color: #000000;
   border-radius: 20px;
   margin-top: 2%;
   margin-left: 10%;
