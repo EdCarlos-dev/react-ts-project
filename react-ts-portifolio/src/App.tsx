@@ -5,6 +5,7 @@ import TechLogos from './logosArea.tsx'
 import TechDivs from './TechDivs.tsx'
 import TenHighestPopulationChart from './TenHighestPopulationChart.tsx'
 import ButtonsArea from './buttonArea.tsx'
+import FormInput from './forms.tsx'
 import CountryDivList from './countriesApi.tsx'
 import Footer from './footer.tsx'
 
@@ -20,6 +21,7 @@ function App() {
         <ButtonsArea /> 
         <TechDivs/>
         <TenHighestPopulationChart/>
+        <FormInput/>
         <CountryDivList/>
 
         <Footer/>
